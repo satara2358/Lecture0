@@ -1,0 +1,4 @@
+pillow
+pip install Pillow
+python maze.py maze1.txt
+

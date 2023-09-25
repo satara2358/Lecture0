@@ -151,7 +151,8 @@ class Maze():
 
         # Inicializa la frontera solo con la posición de inicio
         start = Node(state=self.start, parent=None, action=None)
-        frontier = StackFrontier()
+            ## Para búsqueda en profundidad QueueFrontier() || StackFrontier()
+        frontier = QueueFrontier()
         frontier.add(start)
 
         # Inicializa un conjunto explorado vacío
@@ -266,4 +267,4 @@ m.print()
 
 # Genera una imagen del laberinto y la guarda en un archivo llamado "maze.png".
 # También se especifica que se deben mostrar las celdas exploradas en la imagen.
-m.output_image("maze.png", show_explored=False)
+m.output_image("maze.png", show_explored=True)
